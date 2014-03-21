@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical" >
+  
+    <RelativeLayout
+        android:id="@+id/BarraSuperior_nuevaMezcla"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#cdcdcd"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp" >
+    
+        <TextView
+    		android:id="@+id/textView_titulo_NuevaMezcla"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_centerVertical="true"
+    	    android:gravity="center"
+   			android:text="@string/title_activity_nueva_mezcla"
+    	    android:textSize="24sp"
+    	    android:layout_marginBottom="10dp" />
+       	
+       	<ImageButton
+    	    android:id="@+id/button_atras_NuevaMezcla"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginTop="10dp"
+    	    android:layout_marginLeft="10dp"
+    	    android:layout_marginBottom="10dp"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_alignParentTop="true"
+    	    android:gravity="right"
+    	    android:src="@drawable/ic_button_flechaatras"
+    	    android:contentDescription="Atrás"
+    	    android:textSize="12sp"
+    	    android:onClick="volverAtras" />
+    </RelativeLayout>
+    
+    <ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+        
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:gravity="right" >
+    
+    		<TextView
+    			android:id="@+id/textView_nombre_NuevaMezcla"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="left"
+    			android:text="Nombre de la mezcla:"
+    			android:textSize="16sp"
+    			android:layout_marginBottom="10dp" />
+
+    		<EditText
+        		android:id="@+id/editText_nombre"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_nombre_NuevaMezcla"
+        		android:hint="Escribe el nombre de la mezcla"
+        		android:inputType="text"
+        		android:text="Mezcla"
+        		android:textSize="16sp"
+        		android:ems="10"
+        		android:layout_marginBottom="10dp" >
+        		<requestFocus />
+    		</EditText>
+
+    		<TextView
+    			android:id="@+id/textView_capacidadRecipiente"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@+id/editText_nombre"
+    			android:gravity="left"
+    			android:text="Cantidad de mezcla (ml):"
+    			android:textSize="16sp"
+    			android:layout_marginBottom="10dp" />
+
+    		<EditText
+        		android:id="@+id/editText_capacidadRecipiente"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_capacidadRecipiente"
+        		android:hint="Escribe la cantidad de mezcla"
+        		android:inputType="number"
+        		android:text="0"
+        		android:textSize="16sp"
+        		android:ems="10"
+        		android:layout_marginBottom="10dp" >
+        		<requestFocus />
+    		</EditText>    
+    
+    		<TextView
+    			android:id="@+id/textView_cantidadesLiquidos_NuevaMezcla"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@+id/editText_capacidadRecipiente"
+    			android:gravity="left"
+    			android:layout_marginRight="20dp"
+    			android:text="Porcentaje de cada líquido:"
+    			android:textSize="16sp"
+    			android:layout_marginBottom="10dp" />       		
+    		
+    		<TextView
+    		    android:id="@+id/textView_L1"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_cantidadesLiquidos_NuevaMezcla"
+    		    android:layout_marginBottom="20dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+    		    android:gravity="left"
+    		    android:text="L1:"
+    		    android:textSize="16sp" />    		
+    				
+    		<SeekBar
+    		    android:id="@+id/seekBar_porcentajeL1"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_cantidadesLiquidos_NuevaMezcla"
+    		    android:layout_toRightOf="@+id/textView_L1"
+    		    android:layout_alignRight="@+id/button_aceptar"
+    		    android:layout_marginBottom="20dp"
+    		    android:layout_marginRight="20dp"  
+    		    android:max="100" >
+    		</SeekBar>
+ 
+    		<EditText
+    		    android:id="@+id/editText_porcentajeL1"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_cantidadesLiquidos_NuevaMezcla"
+    		    android:layout_toRightOf="@+id/seekBar_porcentajeL1"
+    		    android:layout_marginBottom="20dp"
+    		    android:layout_marginRight="10dp" 
+    		    android:hint="%"
+    		    android:text="0"
+    		    android:inputType="number"
+    		    android:maxLength="3"
+    		    android:ems="3"
+    		    android:textSize="16sp" >
+        		<requestFocus />    		
+    		</EditText>
+    		
+    		<EditText
+        		android:id="@+id/editText_cantidadL1"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_cantidadesLiquidos_NuevaMezcla"
+        		android:layout_marginBottom="20dp"
+        		android:layout_toRightOf="@+id/editText_porcentajeL1"
+        		android:hint="ml"
+        		android:text="0"
+        		android:inputType="number"
+        		android:ems="5"
+        		android:textSize="16sp" >
+        		<requestFocus />    		
+    		</EditText>     
+        		
+    		<TextView
+    		    android:id="@+id/textView_L2"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_L1"
+    		    android:layout_marginBottom="20dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+    		    android:gravity="left"
+    		    android:text="L2:"
+    		    android:textSize="16sp" />
+					
+    		<SeekBar
+    		    android:id="@+id/seekBar_porcentajeL2"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignRight="@+id/button_aceptar"
+    		    android:layout_below="@+id/textView_L1"
+    		    android:layout_toRightOf="@+id/textView_L2"
+    		    android:layout_marginBottom="20dp"
+    		    android:layout_marginRight="20dp"
+    		    android:max="100" >
+    		</SeekBar>
+    		
+    		<EditText
+    		    android:id="@+id/editText_porcentajeL2"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_L1"
+    		    android:layout_marginBottom="20dp"
+    		    android:layout_marginRight="10dp"
+    		    android:layout_toRightOf="@+id/seekBar_porcentajeL2"
+    		    android:hint="%"
+    		    android:text="0"
+    		    android:inputType="number"
+    		    android:maxLength="3"
+    		    android:ems="3"
+    		    android:textSize="16sp" >
+        		<requestFocus />    		
+    		</EditText>
+    		
+    		<EditText
+        		android:id="@+id/editText_cantidadL2"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_L1"
+        		android:layout_marginBottom="20dp"
+        		android:layout_toRightOf="@+id/editText_porcentajeL2"
+        		android:hint="ml"
+        		android:text="0"
+        		android:inputType="number"
+        		android:ems="5"
+        		android:textSize="16sp" >
+        		<requestFocus />    		
+    		</EditText>
+    		
+    		<TextView
+    			android:id="@+id/textView_L3"
+    		    android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@+id/textView_L2"
+    		    android:layout_marginBottom="20dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+    			android:gravity="left"
+    			android:text="L3:"
+    			android:textSize="16sp" />    		
+    		
+    		<SeekBar
+    		    android:id="@+id/seekBar_porcentajeL3"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignRight="@+id/button_aceptar"
+    		    android:layout_below="@+id/textView_L2"
+    		    android:layout_toRightOf="@+id/textView_L3"
+    		    android:layout_marginBottom="20dp"
+    		    android:layout_marginRight="20dp"
+    		    android:max="100" >
+    		</SeekBar>
+
+    		<EditText
+    		    android:id="@+id/editText_porcentajeL3"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_L2"
+    		    android:layout_marginBottom="20dp"
+    		    android:layout_marginRight="10dp"
+    		    android:layout_toRightOf="@+id/seekBar_porcentajeL3"
+    		    android:hint="%"
+    		    android:text="0"
+    		    android:inputType="number"
+    		    android:maxLength="3"
+    		    android:ems="3"
+    		    android:textSize="16sp" >
+        		<requestFocus />    		
+    		</EditText>
+    		
+    		<EditText
+        		android:id="@+id/editText_cantidadL3"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_L2"
+        		android:layout_marginBottom="20dp"
+        		android:layout_toRightOf="@+id/editText_porcentajeL3"
+        		android:hint="ml"
+        		android:text="0"
+        		android:inputType="number"
+        		android:ems="5"
+        		android:textSize="16sp" >
+        		<requestFocus />    		
+    		</EditText>    		
+    		
+    		<TextView
+    		    android:id="@+id/textView_L4"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    			android:layout_below="@+id/textView_L3"
+    		    android:layout_marginBottom="20dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+    		    android:gravity="left"
+    		    android:text="L4:"
+    		    android:textSize="16sp" />       		
+    		
+    		<SeekBar
+    		    android:id="@+id/seekBar_porcentajeL4"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignRight="@+id/button_aceptar"
+    		    android:layout_below="@+id/textView_L3"
+    		    android:layout_toRightOf="@+id/textView_L4"
+    		    android:layout_marginBottom="10dp"
+    		    android:layout_marginRight="20dp"
+    		    android:max="100" >
+    		</SeekBar>
+    		
+    		<EditText
+    		    android:id="@+id/editText_porcentajeL4"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_L3"
+    		    android:layout_marginBottom="10dp"
+    		    android:layout_marginRight="10dp"
+    		    android:layout_toRightOf="@+id/seekBar_porcentajeL4"
+    		    android:hint="%"
+    		    android:text="0"
+    		    android:inputType="number"
+    		    android:maxLength="3"
+    		    android:ems="3"
+    		    android:textSize="16sp" >
+        		<requestFocus />    		
+    		</EditText>
+    		
+    		<EditText
+        		android:id="@+id/editText_cantidadL4"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_L3"
+        		android:layout_marginBottom="10dp"
+        		android:layout_toRightOf="@+id/editText_porcentajeL4"
+        		android:hint="ml"
+        		android:text="0"
+        		android:inputType="number"
+        		android:ems="5"
+        		android:textSize="16sp" >
+        		<requestFocus />    		
+    		</EditText>
+
+    		<TextView
+    		    android:id="@+id/textView_total"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/editText_porcentajeL4"
+    		    android:layout_marginLeft="10dp"
+    		    android:layout_marginBottom="10dp"
+    		    android:gravity="left"
+    		    android:text="Total:"
+    		    android:textSize="16sp"
+    		    android:textStyle="bold" />    		
+    		
+    		<TextView
+    		    android:id="@+id/textView_porcentajeTotal"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/editText_porcentajeL4"
+    		    android:layout_alignRight="@+id/editText_porcentajeL4"
+    		    android:layout_alignLeft="@+id/editText_porcentajeL4"
+    		    android:layout_marginBottom="20dp"
+    		    android:gravity="left"
+    		    android:ems="3"
+    		    android:text="0"
+    		    android:textSize="16sp"
+    		    android:textStyle="bold" />
+
+    		<TextView
+    		    android:id="@+id/textView_cantidadTotal"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/editText_cantidadL4"
+    		    android:layout_toRightOf="@+id/textView_porcentajeTotal"
+    		    android:layout_alignRight="@+id/editText_cantidadL4"
+    		    android:layout_alignLeft="@+id/editText_cantidadL4"
+    		    android:layout_marginBottom="10dp"
+    		    android:gravity="left"
+    		    android:ems="5"
+    		    android:text="0"
+    		    android:textSize="16sp"
+    		    android:textStyle="bold" />    		
+
+    		<Button
+    		    android:id="@+id/button_aceptar"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_porcentajeTotal"
+    		    android:layout_centerHorizontal="true"
+    		    android:layout_marginRight="10dp"
+    		    android:onClick="crearMezcla"
+    		    android:text="Aceptar"
+    		    android:textSize="16sp" />    		
+    			
+    		<TextView
+    		    android:id="@+id/textView_porcentaje"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/editText_capacidadRecipiente"
+    		    android:layout_toRightOf="@+id/textView_cantidadesLiquidos_NuevaMezcla"
+    		    android:layout_alignRight="@+id/editText_porcentajeL1"
+    		    android:layout_alignLeft="@+id/editText_porcentajeL1"
+    		    android:ems="1"
+    		    android:text="%"
+    		    android:textSize="16sp"
+    		    android:textStyle="bold|italic" />
+    		
+     		<TextView
+    		    android:id="@+id/textView_cantidad"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/editText_capacidadRecipiente"
+    		    android:layout_toRightOf="@+id/textView_porcentaje"
+    		    android:layout_alignRight="@+id/editText_cantidadL1"
+    		    android:layout_alignLeft="@+id/editText_cantidadL1"
+    		    android:text="ml"
+    		    android:ems="1"
+    		    android:textSize="16sp"
+    		    android:textStyle="bold|italic" />
+    		
+    	</RelativeLayout>	
+	</ScrollView>
+</LinearLayout>

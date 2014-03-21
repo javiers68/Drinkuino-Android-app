@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/BarraSuperior_misMezclas"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#cdcdcd"
+        android:orientation="horizontal" >
+
+    	<TextView
+    	    android:id="@+id/textView_titulo_MisMezclas"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_centerVertical="true"
+    	    android:gravity="center"
+    	    android:text="@string/title_activity_mis_mezclas"
+    	    android:textSize="24sp" />
+
+    	<ImageButton
+    	    android:id="@+id/button_anyadir"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_centerVertical="true"
+    	    android:layout_marginBottom="10dp"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginTop="10dp"
+    	    android:src="@drawable/ic_button_anyadir"
+    	    android:contentDescription="Añadir"
+    	    android:gravity="right"
+    	    android:onClick="mostrarNuevaMezcla" />
+
+    	<ImageButton
+    	    android:id="@+id/button_preferencias"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_centerVertical="true"
+    	    android:layout_marginBottom="10dp"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginTop="10dp"
+    	    android:src="@drawable/ic_button_preferencias"
+    	    android:contentDescription="Preferencias"
+    	    android:gravity="left"
+    	    android:onClick="mostrarPreferencias" />
+    </RelativeLayout>
+    
+    <ListView
+        android:id="@id/android:list"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/BarraSuperior_misMezclas"
+    />
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+  
+    <RelativeLayout
+        android:id="@+id/BarraSuperior_detallesMezcla"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#cdcdcd"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/button_atras_DetallesMezcla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+    	    android:layout_marginTop="10dp"
+    	    android:layout_marginLeft="10dp"
+    	    android:layout_marginBottom="10dp"
+            android:gravity="right"
+            android:onClick="volverAtras"
+    	    android:src="@drawable/ic_button_flechaatras"
+    	    android:contentDescription="Atrás"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView_titulo_DetallesMezcla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/title_activity_detalles_mezcla"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+    
+    <ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+        
+      <RelativeLayout 
+        	android:layout_width="fill_parent"
+    		android:layout_height="wrap_content" >
+    
+    		<TextView
+    			android:id="@+id/textView_nombre_DetallesMezcla"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="left"
+    			android:text="Nombre de la mezcla:"
+    			android:textStyle="bold"
+    			android:textSize="20sp"
+    			android:layout_marginBottom="10dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginTop="10dp" />
+
+    		<TextView
+        		android:id="@+id/textView_nombreMezcla"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_nombre_DetallesMezcla"
+        		android:text="Nombre"
+        		android:textSize="16sp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginTop="10dp"
+        		android:layout_marginBottom="20dp" />
+    		
+
+    		<TextView
+    			android:id="@+id/textView_capacidadRecipiente"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@+id/textView_nombreMezcla"
+    			android:gravity="left"
+    			android:text="Cantidad de mezcla (ml):"
+    			android:textStyle="bold"
+    			android:textSize="20sp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginTop="10dp"
+    			android:layout_marginBottom="10dp" />
+
+    		<TextView
+        		android:id="@+id/textView_capacidadRecipienteMezcla"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_capacidadRecipiente"
+        		android:text="Capacidad ml"
+        		android:textSize="16sp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginTop="10dp"
+    			android:layout_marginBottom="20dp" />
+    
+    		<TextView
+    			android:id="@+id/textView_cantidadesLiquidos_DetallesMezcla"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@+id/textView_capacidadRecipienteMezcla"
+    			android:gravity="left"
+    			android:text="Porcentaje y cantidad de cada líquido:"
+    			android:textStyle="bold"
+    			android:textSize="20sp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginTop="10dp"
+    			android:layout_marginBottom="20dp" />    
+    		
+    		<TextView
+        		android:id="@+id/textView_liquido1"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_cantidadesLiquidos_DetallesMezcla"
+        		android:text="Líquido 1: tanto % (x ml)"
+        		android:textSize="16sp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginTop="10dp"
+    			android:layout_marginBottom="10dp" />
+
+    		<TextView
+        		android:id="@+id/textView_liquido2"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_liquido1"
+        		android:text="Líquido 2: tanto % (x ml)"
+        		android:textSize="16sp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginTop="10dp"
+    			android:layout_marginBottom="10dp" />  
+    		
+    		<TextView
+        		android:id="@+id/textView_liquido3"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_liquido2"
+        		android:text="Líquido 3: tanto % (x ml)"
+        		android:textSize="16sp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginTop="10dp"
+    			android:layout_marginBottom="10dp" />  
+
+    		<TextView
+        		android:id="@+id/textView_liquido4"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_liquido3"
+        		android:text="Líquido 4: tanto % (x ml)"
+        		android:textSize="16sp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginTop="10dp"
+    			android:layout_marginBottom="20dp" />
+
+    		<Button
+    		    android:id="@+id/Borrar_mezcla"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignParentBottom="true"
+    		    android:layout_alignParentRight="true"
+    		    android:layout_below="@+id/textView_liquido4"
+    		    android:gravity="right"
+    		    android:onClick="borrarMezcla"
+    		    android:text="Borrar"
+    		    android:textSize="16sp" />
+    		
+    		<Button
+    		    android:id="@+id/Servir_mezcla"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignParentBottom="true"
+    		    android:layout_alignParentLeft="true"
+    		    android:layout_below="@+id/textView_liquido4"
+    		    android:layout_toLeftOf="@+id/Borrar_mezcla"
+    		    android:gravity="center"
+    		    android:onClick="servirMezcla"
+    		    android:text="Servir"
+    		    android:textSize="16sp" />
+
+    	</RelativeLayout>	
+	</ScrollView>
+</LinearLayout>

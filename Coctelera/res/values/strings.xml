@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Coctelera</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_mis_mezclas">Mis mezclas</string><string name="title_activity_nueva_mezcla">Nueva mezcla</string>
+    <string name="title_activity_detalles_mezcla">Detalles de la mezcla</string>
+    <string name="title_activity_preferencias">Preferencias</string>
+    <string name="DIRECCION_BLUETOOTH_DEFECTO">20:13:01:24:11:04</string>
+    <string name="FILENAME_MEZCLAS">dse.coctelera.mezclas.dat</string>
+    <string name="FILENAME_PREFERENCIAS">dse.coctelera.preferencias</string>
+    
+    <string name="key_direccionBluetooth">key_direccionBluetooth</string>
+    <string name="key_estadoConexion">key_estadoConexion</string><string name="key_nivel1">key_nivel1</string>
+    <string name="key_nivel2">key_nivel2</string>
+    <string name="key_nivel3">key_nivel3</string>
+    <string name="key_nivel4">key_nivel4</string>
+    <string name="NIVEL_MAXIMO">2000</string>
+    <string name="prueba">L1: 1000 ml (2000 ml totales)</string>
+    
+
+</resources>

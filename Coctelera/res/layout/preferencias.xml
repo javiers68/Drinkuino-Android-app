@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical" >
+  
+    <RelativeLayout
+        android:id="@+id/BarraSuperior_Preferencias"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#cdcdcd"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp" >
+    
+        <TextView
+    		android:id="@+id/textView_titulo_Preferencias"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_centerVertical="true"
+    	    android:gravity="center"
+   			android:text="@string/title_activity_preferencias"
+    	    android:textSize="24sp"
+    	    android:layout_marginBottom="10dp" />
+       	
+       	<ImageButton
+    	    android:id="@+id/button_atras_Preferencias"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginTop="10dp"
+    	    android:layout_marginLeft="10dp"
+    	    android:layout_marginBottom="10dp"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_alignParentTop="true"
+    	    android:gravity="right"
+    	    android:src="@drawable/ic_button_flechaatras"
+    	    android:contentDescription="Atrás"
+    	    android:textSize="12sp"
+    	    android:onClick="volverAtras" />
+    </RelativeLayout>
+    
+    <ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+        
+      <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:gravity="right" >
+    
+    		<TextView
+    			android:id="@+id/textView_direccionBluetooth"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="left"
+    			android:text="Dirección MAC del dispositivo bluetooth:"
+    			android:textSize="16sp"
+    			android:layout_marginBottom="10dp" />
+
+    		<EditText
+    		    android:id="@+id/editText_direccionBluetooth"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignRight="@+id/textView_nivelL1"
+    		    android:layout_below="@+id/textView_direccionBluetooth"
+    		    android:layout_marginBottom="10dp"
+    		    android:ems="17"
+    		    android:hint="Ej: 20:13:01:24:11:04"
+    		    android:inputType="text"
+    		    android:maxLength="17"
+    		    android:textSize="16sp" >
+
+        		<requestFocus />
+    		</EditText>
+
+    		<ImageButton
+    		    android:id="@+id/button_conectar"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_direccionBluetooth"
+    		    android:layout_toRightOf="@+id/editText_direccionBluetooth"
+    		    android:layout_marginBottom="10dp"
+    		    android:layout_marginRight="15dp"
+    		    android:gravity="center"
+    		    android:onClick="conectarBluetooth"
+    		    android:src="@drawable/ic_button_conectar"
+    	    	android:contentDescription="Conectar"
+    		    android:textSize="16sp" />    		
+
+    		<ImageView
+    		    android:id="@+id/imageView_estadoConexion"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_direccionBluetooth"
+    		    android:layout_toRightOf="@+id/button_conectar"
+    		    android:layout_alignTop="@+id/button_conectar"
+    		    android:layout_alignBottom="@+id/button_conectar"
+    		    android:contentDescription="Estado de la conexión" />
+    		
+    				
+    		<TextView
+    			android:id="@+id/textView_nivelesRecipientes"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@+id/editText_direccionBluetooth"
+    			android:layout_marginBottom="10dp"
+    			android:gravity="left"
+    			android:text="Niveles de recipientes:"
+    			android:textSize="16sp" />		
+    		
+    		<TextView
+    		    android:id="@+id/textView_nivelL1"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_nivelesRecipientes"
+    		    android:layout_marginBottom="30dp"
+    		    android:layout_marginLeft="10dp"
+    		    android:layout_marginRight="10dp"
+    		    android:gravity="left"
+    		    android:text="@string/prueba"
+    		    android:textSize="16sp" />
+  
+    		<Button
+    		    android:id="@+id/button_reiniciarL1"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/textView_nivelesRecipientes"
+    		    android:layout_toRightOf="@+id/textView_nivelL1"
+    		    android:layout_marginBottom="30dp"
+    		    android:layout_marginRight="10dp"
+    		    android:gravity="center"
+    		    android:drawableLeft="@drawable/ic_button_reiniciar"
+    		    android:text="Llenar"
+    		    android:textSize="16sp" />
+        		
+    		<TextView
+        		android:id="@+id/textView_nivelL2"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_nivelL1"
+    		    android:layout_marginBottom="30dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+    		    android:gravity="left"
+    		    android:text="L2: 1000 ml (2000 ml totales)"
+    		    android:textSize="16sp" />    		
+
+    		<Button
+    		    android:id="@+id/button_reiniciarL2"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignLeft="@+id/button_reiniciarL1"
+    		    android:layout_alignRight="@+id/button_reiniciarL1"
+    		    android:layout_below="@+id/textView_nivelL1"
+    		    android:layout_marginBottom="30dp"
+    		    android:drawableLeft="@drawable/ic_button_reiniciar"
+    		    android:gravity="center"
+    		    android:text="Llenar"
+    		    android:textSize="16sp" />
+    		
+    		<TextView
+        		android:id="@+id/textView_nivelL3"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_nivelL2"
+    		    android:layout_marginBottom="30dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+    		    android:gravity="left"
+    		    android:text="L3: 1000 ml (2000 ml totales)"
+    		    android:textSize="16sp" />		
+
+    		<Button
+    		    android:id="@+id/button_reiniciarL3"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignLeft="@+id/button_reiniciarL2"
+    		    android:layout_alignRight="@+id/button_reiniciarL2"
+    		    android:layout_below="@+id/textView_nivelL2"
+    		    android:layout_marginBottom="30dp"
+    		    android:drawableLeft="@drawable/ic_button_reiniciar"
+    		    android:gravity="center"
+    		    android:text="Llenar"
+    		    android:textSize="16sp" />
+    				
+    		<TextView
+        		android:id="@+id/textView_nivelL4"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_nivelL3"
+    		    android:layout_marginBottom="30dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+    		    android:gravity="left"
+    		    android:text="L4: 1000 ml (2000 ml totales)"
+    		    android:textSize="16sp" />    
+
+    		<Button
+    		    android:id="@+id/button_reiniciarL4"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignLeft="@+id/button_reiniciarL3"
+    		    android:layout_alignRight="@+id/button_reiniciarL3"
+    		    android:layout_below="@+id/textView_nivelL3"
+    		    android:layout_marginBottom="30dp"
+    		    android:drawableLeft="@drawable/ic_button_reiniciar"
+    		    android:gravity="center"
+    		    android:text="Llenar"
+    		    android:textSize="16sp" />
+ 		
+    	</RelativeLayout>	
+	</ScrollView>
+</LinearLayout>
