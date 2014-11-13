@@ -1,3 +1,20 @@
+
+/*
+ * Copyright (C) 2014 Drinkuino
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package dse.coctelera;
 
 import android.content.Context;
@@ -12,7 +29,7 @@ public class GestorPreferencias {
 	
 	public GestorPreferencias(Context context) {
 		this.context = context;
-		sharedPreferences = context.getSharedPreferences(context.getString(R.string.FILENAME_PREFERENCIAS), Context.MODE_PRIVATE); //Se obtiene (o se crea si no existÌa) el fichero de preferencias
+		sharedPreferences = context.getSharedPreferences(context.getString(R.string.FILENAME_PREFERENCIAS), Context.MODE_PRIVATE); //Se obtiene (o se crea si no exist√≠a) el fichero de preferencias
 		editor = sharedPreferences.edit(); //Obtiene el editor
 	}
 	
@@ -27,14 +44,14 @@ public class GestorPreferencias {
 		return new int[] {nivel1, nivel2, nivel3, nivel4};
 	}
 	
-	//Devuelve la direcciÛn MAC del bluetooth almacenada en las preferencias, si no se encuentra devuelve la direcciÛn por defecto
+	//Devuelve la direcci√≥n MAC del bluetooth almacenada en las preferencias, si no se encuentra devuelve la direcci√≥n por defecto
 	public String obtenerDireccionBluetooth() {
 		String direccion_bluetooth = sharedPreferences.getString(context.getString(R.string.key_direccionBluetooth), context.getString(R.string.DIRECCION_BLUETOOTH_DEFECTO));
 	
 		return direccion_bluetooth;
 	}
 	
-	//Devuelve el estado de la conexiÛn bluetooth (true si est· conectado, false si no lo est·)
+	//Devuelve el estado de la conexi√≥n bluetooth (true si est√° conectado, false si no lo est√°)
 	public boolean obtenerEstadoConexion() {
 		boolean estado = sharedPreferences.getBoolean(context.getString(R.string.key_estadoConexion), false);
 		
@@ -50,13 +67,13 @@ public class GestorPreferencias {
 		editor.commit();
 	}
 	
-	//Almacena la nueva direcciÛn en las preferencias
+	//Almacena la nueva direcci√≥n en las preferencias
 	public void editarDireccionBluetooth(String direccion) { 
 		editor.putString(context.getString(R.string.key_direccionBluetooth), direccion);
 		editor.commit();
 	}
 	
-	//Almacena el nuevo estado de conexiÛn con el bluetooth
+	//Almacena el nuevo estado de conexi√≥n con el bluetooth
 	public void editarEstadoConexion(boolean estado) { 
 		editor.putBoolean(context.getString(R.string.key_estadoConexion), estado);
 		editor.commit();
