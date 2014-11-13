@@ -1,5 +1,7 @@
 Drinkuino-Android-app
 =====================
+Más información en http://protoinformatico.com/arduino-drinkuino-project/ 
+
 LICENCIA:
 
  * Copyright (C) 2014 Drinkuino
